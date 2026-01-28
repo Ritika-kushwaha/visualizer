@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-6u#ik@j32rm@fk4%%l-a#vv)46-#a3zd!u&v@@zbv)8sthrj%2
 DEBUG = False
 
 # Remove 'https://' and any trailing slashes
-ALLOWED_HOSTS = ["visualizer-o864.onrender.com", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = ["visualizer-o864.onrender.com",  "localhost","127.0.0.1"]
 
 
 # Application definition

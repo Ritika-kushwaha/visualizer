@@ -53,7 +53,7 @@ class DesktopVisualizer(QWidget):
         pw = self.pass_input.text()
         try:
             # Talking to the Django Kitchen
-            response = requests.post('http://127.0.0.1:8000/api/login/', data={'username': user, 'password': pw})
+            response = requests.post('https://visualizer-o864.onrender.com/api/login/', data={'username': user, 'password': pw})
             if response.status_code == 200:
                 self.token = response.json()['access']
                 self.username = user
@@ -92,7 +92,7 @@ class DesktopVisualizer(QWidget):
         if fname:
             files = {'file': open(fname, 'rb')}
             headers = {'Authorization': f'Bearer {self.token}'}
-            res = requests.post('http://127.0.0.1:8000/api/upload/', files=files, headers=headers)
+            res = requests.post('https://visualizer-o864.onrender.com/api/upload/', files=files, headers=headers)
             if res.status_code == 200:
                 data = res.json()
                 self.update_chart(data['avg_temp'], data['avg_pressure'])
