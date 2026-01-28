@@ -12,7 +12,7 @@ export default function Register({ onBackToLogin }) {
   e.preventDefault(); // Prevents page refresh
   setLoading(true);   // Starts the loading spinner/text
   try {
-    await axios.post('http://127.0.0.1:8000/api/register/', {
+    await axios.post('https://visualizer-o864.onrender.com/api/register/', {
       username: username,
       password: password,
       email: email

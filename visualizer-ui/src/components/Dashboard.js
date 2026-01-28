@@ -46,7 +46,7 @@ export default function Dashboard({ onLogout }) {
   const fetchHistory = async () => {
     try {
       const token = localStorage.getItem('token');
-      const response = await axios.get('http://127.0.0.1:8000/api/history/', {
+      const response = await axios.get('https://visualizer-o864.onrender.com/api/history/', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       setHistory(response.data);
@@ -108,7 +108,7 @@ const handleLogout = () => {
 
     try {
       const token = localStorage.getItem('token');
-const response = await axios.post('http://127.0.0.1:8000/api/upload/', formData, {
+const response = await axios.post('https://visualizer-o864.onrender.com/api/upload/', formData, {
     headers: {
         'Authorization': `Bearer ${token}` // This identifies the user for their private silo
     }
